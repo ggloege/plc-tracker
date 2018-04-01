@@ -1,0 +1,18 @@
+<div class="container-fluid d-flex top-row">
+  <div class="mr-auto">
+    <h1 style="color:white">{{title}}</h1>
+  </div>
+  <div class="">
+    <button type="button" class="btn btn-light" name="button" data-toggle="modal" data-target="#exampleModal">
+      <a href="#">New Experiment</a>
+    </button>
+    <!-- <p class="text-right" style="margin:10px"></p> -->
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <app-experiment-form></app-experiment-form>
+  </div>
+
+</div>
+<app-gallery></app-gallery>

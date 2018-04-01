@@ -1,0 +1,41 @@
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">New Experiment</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form #experimentForm="ngForm" (ngSubmit)="onSubmit(); experimentForm.reset()">
+        <div class="form-group">
+          <label for="productName">Product Name</label>
+          <input type="text" class="form-control" id="productName" placeholder="">
+          <small id="productHelp" class="form-text text-muted">For what product are you running this experiment?</small>
+        </div>
+        <div class="form-group">
+          <label for="assumption">We believe that...</label>
+          <textarea class="form-control" id="assumption" rows="3" name="assumption" [(ngModel)]="experiment.assumption"></textarea>
+          <small id="assumptionHelp" class="form-text text-muted">What's the assumption you're trying to de-risk?</small>
+        </div>
+        <div class="form-group">
+          <label for="test">To test that we will...</label>
+          <textarea class="form-control" id="test" rows="3" name="test" [(ngModel)]="experiment.test"></textarea>
+          <small id="experimentHelp" class="form-text text-muted">Describe the experiment you plan to run.</small>
+        </div>
+        <div class="form-group">
+          <label for="metric">And measure...</label>
+          <textarea class="form-control" id="metric" rows="3" name="metric" [(ngModel)]="experiment.metric"></textarea>
+          <small id="metricHelp" class="form-text text-muted">What metrics will help determine your experiment results?</small>
+        </div>
+        <div class="form-group">
+          <label for="criteria">We are right if...</label>
+          <textarea class="form-control" id="criteria" rows="3" name="criteria" [(ngModel)]="experiment.criteria"></textarea>
+          <small id="successCriteriaHelp" class="form-text text-muted">How will you know if your assumption is validated?</small>
+        </div>
+        <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Add to gallery</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+      </form>
+    </div>
+  </div>
+</div>

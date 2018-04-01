@@ -1,0 +1,19 @@
+/* .card {
+  height: 400px;
+  width: 300px;
+  border: solid 1px gray;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: white;
+  margin: 20px;
+} */
+
+.card {
+  height: 500px;
+  width: 350px;
+  margin: 20px;
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}

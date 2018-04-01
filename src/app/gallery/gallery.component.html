@@ -1,0 +1,26 @@
+<div class="container-fluid gallery d-flex flex-wrap align-content-start">
+  <div class="card exp-card" *ngFor="let experiment of experiments">
+    <div class="card-body overflow-scroll">
+      <h5 class="card-title">Pearson Prep</h5>
+      <p class="card-text"><span class="font-weight-bold">We believe that</span> {{ experiment.assumption }}</p>
+      <p><span class="font-weight-bold">To test that we will</span> {{ experiment.test }}</p>
+      <p><span class="font-weight-bold">And measure</span> {{ experiment.metric }}</p>
+      <p><span class="font-weight-bold">We are right if</span> {{ experiment.criteria }}</p>
+    </div>
+    <div class="card-footer">
+      <a href="#" class="btn btn-primary">Edit</a>
+      <a href="#" class="btn btn-secondary">Close</a>
+    </div>
+  </div>
+</div>
+
+<!-- <ul>
+  <li *ngFor="let experiment of experiments">
+    <div class="card">
+      <p><b>We believe that</b> {{ experiment.assumption }}</p>
+      <p><b>To test that we will</b> {{ experiment.test }}</p>
+      <p><b>And measure</b> {{ experiment.metric }}</p>
+      <p><b>We are right if</b> {{ experiment.criteria }}</p>
+    </div>
+  </li>
+</ul> -->
